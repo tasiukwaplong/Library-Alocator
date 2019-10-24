@@ -32,6 +32,8 @@ public class LoginController {
             con = DriverManager.getConnection(url, user, password);
             
         }catch (Exception e){
+            //show a prompt to tell the user connection was not possible
+            JOptionPane.showMessageDialog(null, "Conenction to database unsuccessful", JOptionPane.PLAIN_MESSAGE);
             e.printStackTrace();
         }
         
